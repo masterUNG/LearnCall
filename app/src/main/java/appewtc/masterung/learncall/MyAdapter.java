@@ -22,7 +22,7 @@ public class MyAdapter extends BaseAdapter{
 
     @Override
     public int getCount() {
-        return 16;
+        return intIcon.length;
     }
 
     @Override
@@ -41,7 +41,7 @@ public class MyAdapter extends BaseAdapter{
         View view1 = objLayoutInflater.inflate(R.layout.my_listview, viewGroup, false);
 
         //Show Icon
-        ImageView objImageView = (ImageView) view.findViewById(R.id.imageView);
+        ImageView objImageView = (ImageView) view1.findViewById(R.id.imvShowIcon);
         objImageView.setBackgroundResource(intIcon[i]);
         return view1;
     }
