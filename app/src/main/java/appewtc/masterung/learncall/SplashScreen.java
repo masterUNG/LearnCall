@@ -26,7 +26,7 @@ public class SplashScreen extends ActionBarActivity {
                 startActivity(objIntent);
                 finish();
             }
-        }, 5000);
+        }, 8000);
 
         MediaPlayer objMediaPlayer = MediaPlayer.create(getBaseContext(), R.raw.intro_start_horse);
         objMediaPlayer.start();

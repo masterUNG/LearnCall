@@ -37,7 +37,7 @@ public class MainActivity extends ActionBarActivity {
                 R.drawable.call_10, R.drawable.call_11, R.drawable.call_12, R.drawable.call_13, R.drawable.call_14,
                 R.drawable.call_15, R.drawable.call_16};
 
-        strPhoneNumber = new String[]{"0818595309", "1677", "1192", "191", "1669", "022821815", "199",
+        strPhoneNumber = new String[]{"1155", "1677", "1192", "191", "1669", "022821815", "199",
                 "1129", "1584", "1195", "1125", "1188", "1556", "1808", "1193", "1860"};
 
         //Create Adapter
@@ -102,14 +102,10 @@ public class MainActivity extends ActionBarActivity {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
+        switch (item.getItemId()) {
+            case R.id.itemAboutMe:
+                Intent objIntent = new Intent(MainActivity.this, AboutMeActivity.class);
+                startActivity(objIntent);
         }
 
         return super.onOptionsItemSelected(item);
